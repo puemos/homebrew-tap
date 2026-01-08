@@ -22,7 +22,7 @@ class Lareview < Formula
   def install
     if OS.mac?
       prefix.install "LaReview.app"
-      bin.install_symlink prefix/"LaReview.app/Contents/MacOS/LaReview" => "lareview"
+      bin.install_symlink prefix/"LaReview.app/Contents/MacOS/lareview" => "lareview"
     elsif OS.linux?
       bin.install "LaReview_0.0.18_amd64.AppImage" => "lareview"
     end
