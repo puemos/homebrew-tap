@@ -10,9 +10,8 @@ cask "lareview" do
   desc "Desktop code review companion with AI-generated plans"
   homepage "https://github.com/puemos/lareview"
 
-  app "LaReview.app"
-
-  binary "#{appdir}/LaReview.app/Contents/MacOS/lareview"
-
   depends_on macos: ">= :big_sur"
+
+  app "LaReview.app"
+  binary "#{appdir}/LaReview.app/Contents/MacOS/lareview"
 end
