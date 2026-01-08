@@ -21,7 +21,11 @@ class Lareview < Formula
 
   def install
     if OS.mac?
+      puts "DEBUG: staging.root = #{staging.root}"
+      puts "DEBUG: Files in staging.root:"
+      puts Dir[staging.root.to_s + "/**/*"].join("\n")
       app_path = Dir[staging.root/"**/LaReview.app"].first
+      puts "DEBUG: Found app_path = #{app_path}"
       raise "Could not find LaReview.app in DMG" unless app_path
 
       prefix.install Pathname.new(app_path)
