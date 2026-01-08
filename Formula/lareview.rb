@@ -4,6 +4,8 @@ class Lareview < Formula
   version "0.0.18"
   license "MIT"
 
+  depends_on "gh"
+
   if OS.mac?
     if Hardware::CPU.arm?
       url "https://github.com/puemos/lareview/releases/download/v0.0.18/LaReview_0.0.18_aarch64.dmg"

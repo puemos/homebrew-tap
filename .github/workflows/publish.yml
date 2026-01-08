@@ -1,9 +1,9 @@
-name: brew pr-pull
+name: brew bump
 
 on:
-  pull_request_target:
-    types:
-      - labeled
+  push:
+    tags:
+      - "v*"
 
 jobs:
   pr-pull:
