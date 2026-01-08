@@ -25,4 +25,4 @@ jobs:
         env:
           VERSION: ${{ steps.version.outputs.VERSION }}
         run: |
-          brew bump-formula-pr --no-browse --tag="$VERSION" --revision="$GITHUB_SHA" puemos/lareview/lareview
+          brew bump-formula-pr --no-browse --tag="$VERSION" --revision="$GITHUB_SHA" puemos/tap/lareview
