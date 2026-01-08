@@ -21,10 +21,14 @@ class Lareview < Formula
 
   def install
     if OS.mac?
-      prefix.install "LaReview.app"
+      app_path = Dir[staging.root/"**/LaReview.app"].first
+      raise "Could not find LaReview.app in DMG" unless app_path
+
+      prefix.install Pathname.new(app_path)
       bin.install_symlink prefix/"LaReview.app/Contents/MacOS/lareview" => "lareview"
     elsif OS.linux?
-      bin.install "LaReview_0.0.18_amd64.AppImage" => "lareview"
+      bin.install "LaReview_#{version}_amd64.AppImage" => "lareview"
+      chmod "+x", bin/"lareview"
     end
   end
 
