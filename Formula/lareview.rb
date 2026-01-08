@@ -21,14 +21,30 @@ class Lareview < Formula
 
   def install
     if OS.mac?
-      puts "DEBUG: staging.root = #{staging.root}"
-      puts "DEBUG: Files in staging.root:"
-      puts Dir[staging.root.to_s + "/**/*"].join("\n")
-      app_path = Dir[staging.root/"**/LaReview.app"].first
-      puts "DEBUG: Found app_path = #{app_path}"
-      raise "Could not find LaReview.app in DMG" unless app_path
+      # Find the downloaded DMG in cache
+      cache_dir = Pathname(ENV["HOMEBREW_CACHE"]) if ENV["HOMEBREW_CACHE"]
+      cache_dir ||= Pathname("/Users/#{`whoami`.strip}/Library/Caches/Homebrew")
+      dmg_path = Dir[cache_dir/"downloads/**/LaReview_#{version}*.dmg"].first
+      raise "Could not find DMG in cache" unless dmg_path
 
+      # Mount and extract the DMG
+      tmpdir = Dir.mktmpdir
+      system "hdiutil", "attach", "-plist", "-nobrowse", "-readonly", "-mountrandom", tmpdir, dmg_path
+
+      # Find the .app in the mounted volume
+      app_path = Dir["#{tmpdir}/**/*.app"].first
+      raise "Could not find .app in DMG" unless app_path
+
+      # Install the .app
       prefix.install Pathname.new(app_path)
+
+      # Eject the DMG
+      system "hdiutil", "eject", tmpdir
+
+      # Cleanup temp dir
+      FileUtils.rm_rf tmpdir
+
+      # Create CLI symlink
       bin.install_symlink prefix/"LaReview.app/Contents/MacOS/lareview" => "lareview"
     elsif OS.linux?
       bin.install "LaReview_#{version}_amd64.AppImage" => "lareview"
