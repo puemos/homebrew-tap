@@ -13,4 +13,5 @@ cask "lareview" do
   depends_on macos: ">= :big_sur"
 
   app "LaReview.app"
+  binary "#{appdir}/LaReview.app/Contents/MacOS/lareview"
 end
