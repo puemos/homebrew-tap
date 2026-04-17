@@ -1,9 +1,9 @@
 class Bullpen < Formula
   desc "ACP-powered local stock market analysis workbench"
   homepage "https://github.com/puemos/bullpen"
-  url "https://github.com/puemos/bullpen/releases/download/v0.1.0/Bullpen_0.1.0_amd64.AppImage"
-  version "0.1.0"
-  sha256 "0000000000000000000000000000000000000000000000000000000000000000"
+  url "https://github.com/puemos/bullpen/releases/download/v0.2.0/Bullpen_0.2.0_amd64.AppImage"
+  version "0.2.0"
+  sha256 "b31d548fd5cf0e3ee23cd087765866f7a9ce6dd6de53743292e3436fe58c59ee"
   license "MIT OR Apache-2.0"
 
   depends_on "gh"
