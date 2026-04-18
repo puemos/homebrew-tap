@@ -3,7 +3,7 @@ class Bullpen < Formula
   homepage "https://github.com/puemos/bullpen"
   url "https://github.com/puemos/bullpen/releases/download/v0.5.2/Bullpen_0.5.2_amd64.AppImage"
   version "0.5.2"
-  sha256 "0019dfc4b32d63c1392aa264aed2253c1e0c2fb09216f8e2cc269bbfb8bb49b5"
+  sha256 "4c84248de2ea4f6d5d0595396e2425c0970516dbc0f46450b0d7f1567b295b57"
   license "MIT OR Apache-2.0"
 
   depends_on "gh"
