@@ -1,9 +1,9 @@
 cask "bullpen" do
-  arch arm: "aarch64", intel: "dffc1692bd777da4bd5cf08a980253ac23ea4b18c8af9f642db056ee14b3ecde"
+  arch arm: "aarch64", intel: "66cb51cfd30dc56fe8e4026e328b2674f06e4e224eb566123c7c51ddef58e557"
 
-  version "0.3.3"
-  sha256 arm:   "32ca49e95ad22717888341dc18099ecc380646071276a2d2323c5f7166ffbee6",
-         intel: "dffc1692bd777da4bd5cf08a980253ac23ea4b18c8af9f642db056ee14b3ecde"
+  version "0.3.4"
+  sha256 arm:   "53db2f365a0ffcbcf2abc227ce9191c855c15153fc9af8f1e0458222000ef710",
+         intel: "66cb51cfd30dc56fe8e4026e328b2674f06e4e224eb566123c7c51ddef58e557"
 
   url "https://github.com/puemos/bullpen/releases/download/v#{version}/Bullpen_#{arch}.app.tar.gz"
   name "Bullpen"
