@@ -1,29 +1,29 @@
 class Sshoosh < Formula
   desc "Self-hosted SSH/TUI workspace chat"
   homepage "https://github.com/puemos/sshoosh"
-  version "0.1.7"
+  version "0.1.8"
 
   on_macos do
     on_intel do
-      url "https://github.com/puemos/sshoosh/releases/download/v#{version}/sshoosh-v0.1.7-x86_64-apple-darwin.tar.gz"
-      sha256 "f11d8d2662daf1f9498f2414c2ee34c6613560d4790c882f28ac92251d43dc1b"
+      url "https://github.com/puemos/sshoosh/releases/download/v#{version}/sshoosh-v0.1.8-x86_64-apple-darwin.tar.gz"
+      sha256 "3610d2ff79108288212d9b1d0e638df0b19094b141934244efb4b7ade84a367a"
     end
 
     on_arm do
-      url "https://github.com/puemos/sshoosh/releases/download/v#{version}/sshoosh-v0.1.7-aarch64-apple-darwin.tar.gz"
-      sha256 "456b58b0229f229d3821bcc990a06742ee3998810e18e15b030ccafe44c5c245"
+      url "https://github.com/puemos/sshoosh/releases/download/v#{version}/sshoosh-v0.1.8-aarch64-apple-darwin.tar.gz"
+      sha256 "8458b3f15a775b6cfb277fd682975cb311db63e9eea0c1dedd99d5d0be993135"
     end
   end
 
   on_linux do
     on_intel do
-      url "https://github.com/puemos/sshoosh/releases/download/v#{version}/sshoosh-v0.1.7-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "2d3203e57ff4ebd88903443078181d45c592adb0c71d72a198b6d954e6fb5621"
+      url "https://github.com/puemos/sshoosh/releases/download/v#{version}/sshoosh-v0.1.8-x86_64-unknown-linux-gnu.tar.gz"
+      sha256 "b36fdcf0a467b477e9c55c79182a572bb65e3840ef7245982d5cb8320a07c0c8"
     end
 
     on_arm do
-      url "https://github.com/puemos/sshoosh/releases/download/v#{version}/sshoosh-v0.1.7-aarch64-unknown-linux-gnu.tar.gz"
-      sha256 "2816022ea8abb22927082e675ba28660755d82db35a0f7d49792f9bf4ab7f7b5"
+      url "https://github.com/puemos/sshoosh/releases/download/v#{version}/sshoosh-v0.1.8-aarch64-unknown-linux-gnu.tar.gz"
+      sha256 "2bb6bc3a393a59b1d985422776e308c237594a327983183d722c49ad02876879"
     end
   end
 
