@@ -1,9 +1,9 @@
 cask "lareview" do
   arch arm: "aarch64", intel: "x64"
 
-  version "0.1.3"
-  sha256 arm:   "382feebc912bc4de2d737fcf07f109456847f5aa93d8dbec47a0c0082f303803",
-         intel: "f617f056fad19b4e02e843e05919d61dbb21e366dc840d9e76b1288125753c01"
+  version "0.1.4"
+  sha256 arm:   "ce014c8cb4f830b551069174d8d780069653e9912a688fcb1f15d76fecd36e4c",
+         intel: "938fd4aaf18d09c646575bb10752a2492e9d4ed7d72d50d14866e1989e20d6b4"
 
   url "https://github.com/puemos/lareview/releases/download/v#{version}/LaReview_#{arch}.app.tar.gz"
   name "LaReview"
