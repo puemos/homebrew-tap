@@ -1,9 +1,9 @@
 class Lareview < Formula
   desc "Desktop code review companion with AI-generated plans"
   homepage "https://github.com/puemos/lareview"
-  url "https://github.com/puemos/lareview/releases/download/v0.1.9/LaReview_0.1.9_amd64.AppImage"
-  version "0.1.9"
-  sha256 "921e1e0a6d9713aec411b8f2251edf5dcffadc9df7d35f31d5654c8b8ffdacbf"
+  url "https://github.com/puemos/lareview/releases/download/v0.1.10/LaReview_0.1.10_amd64.AppImage"
+  version "0.1.10"
+  sha256 "7dcdd5d778344705516405dde563048c2c594e03314956e49807616479d29f14"
   license "MIT"
 
   depends_on "gh"
